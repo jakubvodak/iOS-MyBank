@@ -99,6 +99,7 @@
 		CB392506269DE911002F1F29 /* MyBank */ = {
 			isa = PBXGroup;
 			children = (
+				CB392538269DED46002F1F29 /* Screens */,
 				CB39250B269DE911002F1F29 /* ContentView.swift */,
 				CB392537269DEC32002F1F29 /* Supporting Files */,
 				CB39250F269DE913002F1F29 /* Preview Content */,
@@ -138,10 +139,49 @@
 				CB392507269DE911002F1F29 /* AppDelegate.swift */,
 				CB392509269DE911002F1F29 /* SceneDelegate.swift */,
 				CB39250D269DE913002F1F29 /* Assets.xcassets */,
-				CB392512269DE913002F1F29 /* LaunchScreen.storyboard */,
 				CB392515269DE913002F1F29 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB392538269DED46002F1F29 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CB39253C269DEDE7002F1F29 /* PaymentScreen */,
+				CB39253B269DEDDA002F1F29 /* HistoryScreen */,
+				CB39253A269DEDCB002F1F29 /* OverviewScreen */,
+				CB392539269DED7F002F1F29 /* LaunchScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CB392539269DED7F002F1F29 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CB392512269DE913002F1F29 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		CB39253A269DEDCB002F1F29 /* OverviewScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OverviewScreen;
+			sourceTree = "<group>";
+		};
+		CB39253B269DEDDA002F1F29 /* HistoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HistoryScreen;
+			sourceTree = "<group>";
+		};
+		CB39253C269DEDE7002F1F29 /* PaymentScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PaymentScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
