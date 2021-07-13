@@ -8,5 +8,5 @@
 import Foundation
 
 struct Account: Codable {
-    
+    let name: String
 }

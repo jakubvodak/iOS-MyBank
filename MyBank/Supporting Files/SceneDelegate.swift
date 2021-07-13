@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        let accountViewModel = AccountViewModel()
+        let accountFetcher = AccountFetcher()
+        let accountViewModel = AccountViewModel(accountFetcher: accountFetcher)
         let accountView = AccountView(viewModel: accountViewModel)
 
         // Use a UIHostingController as window root view controller.
