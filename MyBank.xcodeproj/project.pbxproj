@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392507269DE911002F1F29 /* AppDelegate.swift */; };
 		CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392509269DE911002F1F29 /* SceneDelegate.swift */; };
-		CB39250C269DE911002F1F29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39250B269DE911002F1F29 /* ContentView.swift */; };
 		CB39250E269DE913002F1F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB39250D269DE913002F1F29 /* Assets.xcassets */; };
 		CB392511269DE913002F1F29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB392510269DE913002F1F29 /* Preview Assets.xcassets */; };
 		CB392514269DE913002F1F29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB392512269DE913002F1F29 /* LaunchScreen.storyboard */; };
 		CB39251F269DE913002F1F29 /* MyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39251E269DE913002F1F29 /* MyBankTests.swift */; };
 		CB39252A269DE913002F1F29 /* MyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392529269DE913002F1F29 /* MyBankUITests.swift */; };
+		CB39253E269DEEF9002F1F29 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39253D269DEEF9002F1F29 /* AccountView.swift */; };
+		CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39253F269DEF02002F1F29 /* AccountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		CB392504269DE911002F1F29 /* MyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB392507269DE911002F1F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB392509269DE911002F1F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB39250B269DE911002F1F29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB39250D269DE913002F1F29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB392510269DE913002F1F29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB392513269DE913002F1F29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		CB392525269DE913002F1F29 /* MyBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB392529269DE913002F1F29 /* MyBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBankUITests.swift; sourceTree = "<group>"; };
 		CB39252B269DE913002F1F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB39253D269DEEF9002F1F29 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		CB39253F269DEF02002F1F29 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				CB392538269DED46002F1F29 /* Screens */,
-				CB39250B269DE911002F1F29 /* ContentView.swift */,
 				CB392537269DEC32002F1F29 /* Supporting Files */,
 				CB39250F269DE913002F1F29 /* Preview Content */,
 			);
@@ -147,41 +148,43 @@
 		CB392538269DED46002F1F29 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CB39253C269DEDE7002F1F29 /* PaymentScreen */,
-				CB39253B269DEDDA002F1F29 /* HistoryScreen */,
-				CB39253A269DEDCB002F1F29 /* OverviewScreen */,
-				CB392539269DED7F002F1F29 /* LaunchScreen */,
+				CB39253C269DEDE7002F1F29 /* Payment */,
+				CB39253B269DEDDA002F1F29 /* History */,
+				CB39253A269DEDCB002F1F29 /* Account */,
+				CB392539269DED7F002F1F29 /* Launch */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		CB392539269DED7F002F1F29 /* LaunchScreen */ = {
+		CB392539269DED7F002F1F29 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
 				CB392512269DE913002F1F29 /* LaunchScreen.storyboard */,
 			);
-			path = LaunchScreen;
+			path = Launch;
 			sourceTree = "<group>";
 		};
-		CB39253A269DEDCB002F1F29 /* OverviewScreen */ = {
+		CB39253A269DEDCB002F1F29 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CB39253D269DEEF9002F1F29 /* AccountView.swift */,
+				CB39253F269DEF02002F1F29 /* AccountViewModel.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		CB39253B269DEDDA002F1F29 /* History */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = OverviewScreen;
+			path = History;
 			sourceTree = "<group>";
 		};
-		CB39253B269DEDDA002F1F29 /* HistoryScreen */ = {
+		CB39253C269DEDE7002F1F29 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = HistoryScreen;
-			sourceTree = "<group>";
-		};
-		CB39253C269DEDE7002F1F29 /* PaymentScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PaymentScreen;
+			path = Payment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */,
+				CB39253E269DEEF9002F1F29 /* AccountView.swift in Sources */,
 				CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */,
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
-				CB39250C269DE911002F1F29 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
