@@ -16,6 +16,9 @@
 		CB39252A269DE913002F1F29 /* MyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392529269DE913002F1F29 /* MyBankUITests.swift */; };
 		CB39253E269DEEF9002F1F29 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39253D269DEEF9002F1F29 /* AccountView.swift */; };
 		CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39253F269DEF02002F1F29 /* AccountViewModel.swift */; };
+		CB392547269DF57B002F1F29 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392546269DF57B002F1F29 /* Responses.swift */; };
+		CB392549269DF5AF002F1F29 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392548269DF5AF002F1F29 /* Account.swift */; };
+		CB39254B269DF60F002F1F29 /* AccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39254A269DF60F002F1F29 /* AccountError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		CB39252B269DE913002F1F29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB39253D269DEEF9002F1F29 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CB39253F269DEF02002F1F29 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		CB392546269DF57B002F1F29 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		CB392548269DF5AF002F1F29 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		CB39254A269DF60F002F1F29 /* AccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,9 @@
 		CB392506269DE911002F1F29 /* MyBank */ = {
 			isa = PBXGroup;
 			children = (
-				CB392538269DED46002F1F29 /* Screens */,
+				CB392543269DF3EA002F1F29 /* Models */,
+				CB392541269DF233002F1F29 /* Services */,
+				CB392538269DED46002F1F29 /* Scenes */,
 				CB392537269DEC32002F1F29 /* Supporting Files */,
 				CB39250F269DE913002F1F29 /* Preview Content */,
 			);
@@ -145,7 +153,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CB392538269DED46002F1F29 /* Screens */ = {
+		CB392538269DED46002F1F29 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				CB39253C269DEDE7002F1F29 /* Payment */,
@@ -153,7 +161,7 @@
 				CB39253A269DEDCB002F1F29 /* Account */,
 				CB392539269DED7F002F1F29 /* Launch */,
 			);
-			path = Screens;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		CB392539269DED7F002F1F29 /* Launch */ = {
@@ -185,6 +193,31 @@
 			children = (
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		CB392541269DF233002F1F29 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CB392542269DF239002F1F29 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CB392542269DF239002F1F29 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CB392546269DF57B002F1F29 /* Responses.swift */,
+				CB39254A269DF60F002F1F29 /* AccountError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CB392543269DF3EA002F1F29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB392548269DF5AF002F1F29 /* Account.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,10 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB392547269DF57B002F1F29 /* Responses.swift in Sources */,
 				CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */,
 				CB39253E269DEEF9002F1F29 /* AccountView.swift in Sources */,
 				CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */,
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
+				CB39254B269DF60F002F1F29 /* AccountError.swift in Sources */,
+				CB392549269DF5AF002F1F29 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

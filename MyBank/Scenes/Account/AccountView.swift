@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct AccountView: View {
+    @ObservedObject var viewModel: AccountViewModel
+    
+    init(viewModel: AccountViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
-    }
-}
-
-struct AccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountView()
     }
 }
