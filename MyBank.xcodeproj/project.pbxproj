@@ -19,6 +19,7 @@
 		CB392547269DF57B002F1F29 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392546269DF57B002F1F29 /* Responses.swift */; };
 		CB392549269DF5AF002F1F29 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392548269DF5AF002F1F29 /* Account.swift */; };
 		CB39254B269DF60F002F1F29 /* AccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39254A269DF60F002F1F29 /* AccountError.swift */; };
+		CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39254C269DF662002F1F29 /* AccountFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CB392546269DF57B002F1F29 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		CB392548269DF5AF002F1F29 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		CB39254A269DF60F002F1F29 /* AccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountError.swift; sourceTree = "<group>"; };
+		CB39254C269DF662002F1F29 /* AccountFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				CB392546269DF57B002F1F29 /* Responses.swift */,
+				CB39254C269DF662002F1F29 /* AccountFetcher.swift */,
 				CB39254A269DF60F002F1F29 /* AccountError.swift */,
 			);
 			path = Networking;
@@ -355,6 +358,7 @@
 				CB39253E269DEEF9002F1F29 /* AccountView.swift in Sources */,
 				CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */,
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
+				CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */,
 				CB39254B269DF60F002F1F29 /* AccountError.swift in Sources */,
 				CB392549269DF5AF002F1F29 /* Account.swift in Sources */,
 			);
