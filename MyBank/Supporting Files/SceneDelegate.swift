@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let accountFetcher = AccountFetcher()
         let accountViewModel = AccountViewModel(accountFetcher: accountFetcher)
+        
         let accountView = AccountView(viewModel: accountViewModel)
 
         // Use a UIHostingController as window root view controller.

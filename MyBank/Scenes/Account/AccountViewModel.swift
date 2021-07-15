@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 class AccountViewModel: ObservableObject {
 
     private let accountFetcher: AccountFetcher
-    private var accounts: [Account]?
+    @Published var accounts: [Account]?
     
     init(accountFetcher: AccountFetcher, scheduler: DispatchQueue = DispatchQueue(label: "AccountViewModel")) {
         self.accountFetcher = accountFetcher
