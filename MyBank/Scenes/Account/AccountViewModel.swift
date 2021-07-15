@@ -10,6 +10,7 @@ import Foundation
 class AccountViewModel: ObservableObject {
 
     private let accountFetcher: AccountFetcher
+    private var accounts: [Account]?
     
     init(accountFetcher: AccountFetcher, scheduler: DispatchQueue = DispatchQueue(label: "AccountViewModel")) {
         self.accountFetcher = accountFetcher
@@ -19,6 +20,8 @@ class AccountViewModel: ObservableObject {
     
     func fetchAccounts() {
         
-        accountFetcher.fetchAccounts()
+        accountFetcher.fetchAccounts(completionHandler: { [weak self] response, error in
+            self?.accounts = response?.accounts
+        })
     }
 }

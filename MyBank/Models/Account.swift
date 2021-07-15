@@ -8,5 +8,8 @@
 import Foundation
 
 struct Account: Codable {
-    let name: String
+    let name: String?
+    let number: Int?
+    let currency: String?
+    let balance: Double?
 }

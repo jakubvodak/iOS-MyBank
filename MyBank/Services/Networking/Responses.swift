@@ -8,5 +8,5 @@
 import Foundation
 
 struct AccountsResponse: Codable {
-    let list: [Account]
+    let accounts: [Account]
 }

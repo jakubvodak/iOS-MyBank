@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol AccountFetchable {
-    
+    func fetchAccounts(completionHandler:@escaping (AccountsResponse?, AccountError?) -> ())
 }
 
 class AccountFetcher {
@@ -21,16 +21,20 @@ class AccountFetcher {
 }
 
 extension AccountFetcher: AccountFetchable {
-    
-    func fetchAccounts() {
+    func fetchAccounts(completionHandler:@escaping (AccountsResponse?, AccountError?) -> ())  {
         session.dataTask(with: makeAccountRequest()) { (data, response, error) in
             if let data = data {
+                let decoder = JSONDecoder()
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-                } catch {
-                    let error = AccountError.network(description: error.localizedDescription)
+                    let accountsResponse = try decoder.decode(AccountsResponse.self, from: data)
+                    completionHandler(accountsResponse, nil)
                 }
+                catch {
+                    completionHandler(nil, AccountError.parsing)
+                }
+            }
+            else {
+                completionHandler(nil, AccountError.network)
             }
         }.resume()
     }

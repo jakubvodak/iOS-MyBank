@@ -19,7 +19,6 @@
 		CB392547269DF57B002F1F29 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392546269DF57B002F1F29 /* Responses.swift */; };
 		CB392549269DF5AF002F1F29 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392548269DF5AF002F1F29 /* Account.swift */; };
 		CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39254C269DF662002F1F29 /* AccountFetcher.swift */; };
-		CB39254F269DFD5C002F1F29 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39254E269DFD5C002F1F29 /* Parsing.swift */; };
 		CB392551269FFC8E002F1F29 /* AccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392550269FFC8E002F1F29 /* AccountError.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		CB392546269DF57B002F1F29 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		CB392548269DF5AF002F1F29 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		CB39254C269DF662002F1F29 /* AccountFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFetcher.swift; sourceTree = "<group>"; };
-		CB39254E269DFD5C002F1F29 /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		CB392550269FFC8E002F1F29 /* AccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,7 +208,6 @@
 		CB392542269DF239002F1F29 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CB39254E269DFD5C002F1F29 /* Parsing.swift */,
 				CB392546269DF57B002F1F29 /* Responses.swift */,
 				CB39254C269DF662002F1F29 /* AccountFetcher.swift */,
 				CB392550269FFC8E002F1F29 /* AccountError.swift */,
@@ -357,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB392547269DF57B002F1F29 /* Responses.swift in Sources */,
-				CB39254F269DFD5C002F1F29 /* Parsing.swift in Sources */,
 				CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */,
 				CB39253E269DEEF9002F1F29 /* AccountView.swift in Sources */,
 				CB392551269FFC8E002F1F29 /* AccountError.swift in Sources */,
