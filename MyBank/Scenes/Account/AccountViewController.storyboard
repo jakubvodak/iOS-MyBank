@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AccountViewController" customModule="MyBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-WL-63E" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5M-dZ-Hca" userLabel="lblSubtitle">
+                                        <rect key="frame" x="20" y="66" width="112.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyBank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K0-Z9-sA8" userLabel="lblTitle">
+                                        <rect key="frame" x="20" y="30" width="101" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZj-fd-hUS" userLabel="btnSendMoney">
+                                        <rect key="frame" x="20" y="116" width="158" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jGy-ie-MQB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Send Money">
+                                            <color key="titleColor" red="0.28864330049999998" green="0.57760637999999997" blue="0.50587648149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-aB-JU4" userLabel="btnAllTransfers">
+                                        <rect key="frame" x="198" y="116" width="196" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="baR-8h-ry1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Transfer History">
+                                            <color key="titleColor" red="0.28864330049999998" green="0.57760637999999997" blue="0.50587648149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28627450980392155" green="0.57647058823529407" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qZj-fd-hUS" firstAttribute="top" secondItem="B5M-dZ-Hca" secondAttribute="bottom" constant="30" id="1yO-pW-wBo"/>
+                                    <constraint firstItem="1Fv-aB-JU4" firstAttribute="width" secondItem="qZj-fd-hUS" secondAttribute="width" multiplier="1.24176" id="5eG-dl-5mF"/>
+                                    <constraint firstItem="8K0-Z9-sA8" firstAttribute="leading" secondItem="F6L-WL-63E" secondAttribute="leading" constant="20" id="7Hy-x7-Sqd"/>
+                                    <constraint firstItem="8K0-Z9-sA8" firstAttribute="top" secondItem="F6L-WL-63E" secondAttribute="top" constant="30" id="KKz-GV-ayM"/>
+                                    <constraint firstItem="B5M-dZ-Hca" firstAttribute="leading" secondItem="F6L-WL-63E" secondAttribute="leading" constant="20" id="KpQ-0P-b9x"/>
+                                    <constraint firstItem="B5M-dZ-Hca" firstAttribute="top" secondItem="8K0-Z9-sA8" secondAttribute="bottom" constant="5" id="Ljs-m6-F12"/>
+                                    <constraint firstItem="1Fv-aB-JU4" firstAttribute="leading" secondItem="qZj-fd-hUS" secondAttribute="trailing" constant="20" id="TOs-91-0g4"/>
+                                    <constraint firstItem="1Fv-aB-JU4" firstAttribute="centerY" secondItem="qZj-fd-hUS" secondAttribute="centerY" id="Y80-fT-VSy"/>
+                                    <constraint firstItem="qZj-fd-hUS" firstAttribute="leading" secondItem="F6L-WL-63E" secondAttribute="leading" constant="20" id="jig-bv-SaC"/>
+                                    <constraint firstAttribute="height" constant="180" id="xjB-Lt-D7f"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Fv-aB-JU4" secondAttribute="trailing" constant="20" id="zcA-yi-JGO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F6L-WL-63E" secondAttribute="trailing" id="2MI-sn-Vcf"/>
+                            <constraint firstItem="F6L-WL-63E" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Nkp-V5-hTD"/>
+                            <constraint firstItem="F6L-WL-63E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ltO-ed-0O3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSend" destination="qZj-fd-hUS" id="gve-7Z-I8D"/>
+                        <outlet property="btnTransfers" destination="1Fv-aB-JU4" id="wht-ta-U1h"/>
+                        <outlet property="headerView" destination="F6L-WL-63E" id="7rU-ke-R9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
