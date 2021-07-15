@@ -39,7 +39,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Send Money">
-                                            <color key="titleColor" red="0.28864330049999998" green="0.57760637999999997" blue="0.50587648149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.10588235294117647" green="0.27843137254901962" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-aB-JU4" userLabel="btnAllTransfers">
@@ -50,11 +50,11 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Transfer History">
-                                            <color key="titleColor" red="0.28864330049999998" green="0.57760637999999997" blue="0.50587648149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.10588235294117647" green="0.27843137254901962" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.28627450980392155" green="0.57647058823529407" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.27843137254901962" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="qZj-fd-hUS" firstAttribute="top" secondItem="B5M-dZ-Hca" secondAttribute="bottom" constant="30" id="1yO-pW-wBo"/>
                                     <constraint firstItem="1Fv-aB-JU4" firstAttribute="width" secondItem="qZj-fd-hUS" secondAttribute="width" multiplier="1.24176" id="5eG-dl-5mF"/>
