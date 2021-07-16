@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB033E8C26A14E1F00456E76 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */; };
 		CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392507269DE911002F1F29 /* AppDelegate.swift */; };
 		CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392509269DE911002F1F29 /* SceneDelegate.swift */; };
 		CB39250E269DE913002F1F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB39250D269DE913002F1F29 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		CB392504269DE911002F1F29 /* MyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB392507269DE911002F1F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB392509269DE911002F1F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB033E8926A14DFD00456E76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB033E8A26A14E0800456E76 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB033E8A26A14E0800456E76 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CB3924FB269DE911002F1F29 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +132,7 @@
 				CB392543269DF3EA002F1F29 /* Models */,
 				CB392541269DF233002F1F29 /* Services */,
 				CB392538269DED46002F1F29 /* Scenes */,
+				CB033E8926A14DFD00456E76 /* View */,
 				CB392537269DEC32002F1F29 /* Supporting Files */,
 				CB39250F269DE913002F1F29 /* Preview Content */,
 			);
@@ -363,6 +382,7 @@
 				CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */,
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
 				CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */,
+				CB033E8C26A14E1F00456E76 /* AccountTableViewCell.swift in Sources */,
 				CB392549269DF5AF002F1F29 /* Account.swift in Sources */,
 				CB39255326A012F7002F1F29 /* AccountViewController.swift in Sources */,
 			);

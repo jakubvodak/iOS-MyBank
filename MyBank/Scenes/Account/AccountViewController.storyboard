@@ -69,19 +69,115 @@
                                     <constraint firstAttribute="trailing" secondItem="1Fv-aB-JU4" secondAttribute="trailing" constant="20" id="zcA-yi-JGO"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YzF-CF-do9">
+                                <rect key="frame" x="10" y="224" width="394" height="638"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray5Color"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountTableViewCell" id="6jQ-ya-S8t" customClass="AccountTableViewCell" customModule="MyBank" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="394" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6jQ-ya-S8t" id="XCS-XV-4vF">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsM-7x-vFE" userLabel="bgView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="55"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BankAccount" translatesAutoresizingMaskIntoConstraints="NO" id="wha-Rm-vYX" userLabel="BankAccountIcon">
+                                                            <rect key="frame" x="10" y="7.5" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="DLx-ik-Q2S"/>
+                                                                <constraint firstAttribute="width" secondItem="wha-Rm-vYX" secondAttribute="height" multiplier="1:1" id="Qn0-Fy-81i"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-34-9SV" userLabel="AccountView">
+                                                            <rect key="frame" x="60" y="10" width="236.5" height="35"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="Test account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEL-kT-3qz" userLabel="lblTitle">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2121212121" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2F-Xr-HvA" userLabel="lblSubtitle">
+                                                                    <rect key="frame" x="0.0" y="21" width="103" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="N2F-Xr-HvA" firstAttribute="top" secondItem="AEL-kT-3qz" secondAttribute="bottom" constant="2" id="S13-Q4-UjC"/>
+                                                                <constraint firstItem="AEL-kT-3qz" firstAttribute="top" secondItem="Wee-34-9SV" secondAttribute="top" id="WH8-FO-tWc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="N2F-Xr-HvA" secondAttribute="bottom" id="hAz-cK-8Gs"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-zl-Gbu" userLabel="lblCurrency">
+                                                            <rect key="frame" x="356" y="19.5" width="28" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgj-YB-Zfl" userLabel="lblAmount">
+                                                            <rect key="frame" x="306.5" y="18" width="44.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="KTH-zl-Gbu" secondAttribute="trailing" constant="10" id="5Bf-go-c5l"/>
+                                                        <constraint firstItem="Wee-34-9SV" firstAttribute="top" secondItem="XsM-7x-vFE" secondAttribute="top" constant="10" id="9lW-0J-W1a"/>
+                                                        <constraint firstItem="Wee-34-9SV" firstAttribute="leading" secondItem="wha-Rm-vYX" secondAttribute="trailing" constant="10" id="Dnf-ZO-CeQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Wee-34-9SV" secondAttribute="bottom" constant="10" id="UqF-By-ybx"/>
+                                                        <constraint firstItem="wha-Rm-vYX" firstAttribute="centerY" secondItem="XsM-7x-vFE" secondAttribute="centerY" id="bdE-0h-OxD"/>
+                                                        <constraint firstItem="KTH-zl-Gbu" firstAttribute="leading" secondItem="Rgj-YB-Zfl" secondAttribute="trailing" constant="5" id="buf-4B-Uz5"/>
+                                                        <constraint firstItem="wha-Rm-vYX" firstAttribute="leading" secondItem="XsM-7x-vFE" secondAttribute="leading" constant="10" id="bxp-ju-m6e"/>
+                                                        <constraint firstItem="KTH-zl-Gbu" firstAttribute="centerY" secondItem="XsM-7x-vFE" secondAttribute="centerY" id="eac-pT-47n"/>
+                                                        <constraint firstItem="Rgj-YB-Zfl" firstAttribute="leading" secondItem="Wee-34-9SV" secondAttribute="trailing" constant="10" id="pWJ-ep-YEp"/>
+                                                        <constraint firstItem="Rgj-YB-Zfl" firstAttribute="centerY" secondItem="XsM-7x-vFE" secondAttribute="centerY" id="s7u-xx-f8R"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="XsM-7x-vFE" secondAttribute="trailing" id="YI9-Ur-C7L"/>
+                                                <constraint firstItem="XsM-7x-vFE" firstAttribute="top" secondItem="XCS-XV-4vF" secondAttribute="top" id="p1h-oc-cgS"/>
+                                                <constraint firstItem="XsM-7x-vFE" firstAttribute="leading" secondItem="XCS-XV-4vF" secondAttribute="leading" id="thC-c8-5Gc"/>
+                                                <constraint firstAttribute="bottom" secondItem="XsM-7x-vFE" secondAttribute="bottom" constant="10" id="xoI-Xe-toG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="bgView" destination="XsM-7x-vFE" id="k5m-fW-rEO"/>
+                                            <outlet property="lblTitle" destination="AEL-kT-3qz" id="4Tp-gd-fWv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="2hs-XC-0gX"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F6L-WL-63E" secondAttribute="trailing" id="2MI-sn-Vcf"/>
                             <constraint firstItem="F6L-WL-63E" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Nkp-V5-hTD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YzF-CF-do9" secondAttribute="bottom" id="lXu-df-Fc3"/>
                             <constraint firstItem="F6L-WL-63E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ltO-ed-0O3"/>
+                            <constraint firstItem="YzF-CF-do9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="squ-SL-gY5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YzF-CF-do9" secondAttribute="trailing" constant="10" id="ucC-Ea-KaI"/>
+                            <constraint firstItem="YzF-CF-do9" firstAttribute="top" secondItem="F6L-WL-63E" secondAttribute="bottom" id="vau-og-fSU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnSend" destination="qZj-fd-hUS" id="gve-7Z-I8D"/>
                         <outlet property="btnTransfers" destination="1Fv-aB-JU4" id="wht-ta-U1h"/>
                         <outlet property="headerView" destination="F6L-WL-63E" id="7rU-ke-R9d"/>
+                        <outlet property="tableView" destination="YzF-CF-do9" id="wop-xj-R45"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,6 +186,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BankAccount" width="64" height="64"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

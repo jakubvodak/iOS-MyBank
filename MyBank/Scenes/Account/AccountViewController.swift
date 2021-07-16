@@ -12,7 +12,7 @@ class AccountViewController: UIViewController {
 
     // MARK: - Variables
     
-    var viewModel: AccountViewModel?
+    var viewModel: AccountViewModel!
     private var cancellables: Set<AnyCancellable> = []
     
     // MARK: - Outlets
@@ -20,6 +20,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var btnTransfers: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Object Lifecycle
     
@@ -32,15 +33,35 @@ class AccountViewController: UIViewController {
     
     private func configureView() {
      
-        headerView.layer.cornerRadius = 10
+        //headerView.layer.cornerRadius = 10
         btnSend.layer.cornerRadius = 10
         btnTransfers.layer.cornerRadius = 10
+        tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
 
+    // MARK: - Data Binding
+    
     private func bindViewModel() {
         guard let viewModel = viewModel else {return}
         viewModel.$accounts.sink { _ in
-            
+            self.tableView.reloadData()
         }.store(in: &cancellables)
+    }
+}
+
+extension AccountViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.accounts?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     
+        let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewCell.cellIdentifier, for: indexPath) as! AccountTableViewCell
+        let account = viewModel.accounts![indexPath.row]
+        
+        cell.lblTitle.text = account.name
+        
+        return cell
     }
 }
