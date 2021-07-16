@@ -33,6 +33,8 @@ class AccountViewController: UIViewController {
     
     private func configureView() {
      
+        navigationController?.title = "Wallet"
+        
         //headerView.layer.cornerRadius = 10
         btnSend.layer.cornerRadius = 10
         btnTransfers.layer.cornerRadius = 10

@@ -31,7 +31,10 @@ class AccountTableViewCell: UITableViewCell {
     }
 
     override func prepareForReuse() {
-        lblTitle.text = String()
+        lblTitle.text = "Unknown"
+        lblSubtitle.text = String()
+        lblBalance.text = String()
+        lblCurrency.text = String()
     }
     
     func configureWithAccount(account: Account) {

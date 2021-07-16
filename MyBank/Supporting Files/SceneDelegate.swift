@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let initialViewController = storyboard.instantiateInitialViewController() as! AccountViewController
         initialViewController.viewModel = accountViewModel
         
+        configureNavBarAppearance()
         let navigationController = UINavigationController(rootViewController: initialViewController)
 
         // Use a UIHostingController as window root view controller.
@@ -64,6 +65,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func configureNavBarAppearance() {
+        
+        UINavigationBar.appearance().barTintColor = .systemGray5
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+    }
 
 }
 
