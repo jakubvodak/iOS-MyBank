@@ -43,8 +43,8 @@ class AccountViewController: UIViewController {
     
     private func bindViewModel() {
         guard let viewModel = viewModel else {return}
-        viewModel.$accounts.sink { _ in
-            self.tableView.reloadData()
+        viewModel.$accounts.sink { [weak self] _ in
+            self?.tableView.reloadData()
         }.store(in: &cancellables)
     }
 }
