@@ -91,26 +91,30 @@
                                                                 <constraint firstAttribute="width" secondItem="wha-Rm-vYX" secondAttribute="height" multiplier="1:1" id="Qn0-Fy-81i"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-34-9SV" userLabel="AccountView">
-                                                            <rect key="frame" x="60" y="10" width="236.5" height="35"/>
+                                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-34-9SV" userLabel="AccountView">
+                                                            <rect key="frame" x="60" y="10" width="91.5" height="35"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="Test account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEL-kT-3qz" userLabel="lblTitle">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="19"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" text="Test account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEL-kT-3qz" userLabel="lblTitle">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91.5" height="19"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2121212121" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2F-Xr-HvA" userLabel="lblSubtitle">
-                                                                    <rect key="frame" x="0.0" y="21" width="103" height="14"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2121212121" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2F-Xr-HvA" userLabel="lblSubtitle">
+                                                                    <rect key="frame" x="0.0" y="21" width="81.5" height="14"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="N2F-Xr-HvA" secondAttribute="trailing" constant="10" id="R4L-bG-GYJ"/>
                                                                 <constraint firstItem="N2F-Xr-HvA" firstAttribute="top" secondItem="AEL-kT-3qz" secondAttribute="bottom" constant="2" id="S13-Q4-UjC"/>
                                                                 <constraint firstItem="AEL-kT-3qz" firstAttribute="top" secondItem="Wee-34-9SV" secondAttribute="top" id="WH8-FO-tWc"/>
+                                                                <constraint firstItem="AEL-kT-3qz" firstAttribute="leading" secondItem="Wee-34-9SV" secondAttribute="leading" id="Yah-LM-bXL"/>
+                                                                <constraint firstAttribute="trailing" secondItem="AEL-kT-3qz" secondAttribute="trailing" id="eDC-4N-VNl"/>
                                                                 <constraint firstAttribute="bottom" secondItem="N2F-Xr-HvA" secondAttribute="bottom" id="hAz-cK-8Gs"/>
+                                                                <constraint firstItem="N2F-Xr-HvA" firstAttribute="leading" secondItem="Wee-34-9SV" secondAttribute="leading" id="xSS-LP-llc"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-zl-Gbu" userLabel="lblCurrency">
@@ -119,7 +123,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgj-YB-Zfl" userLabel="lblAmount">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="27000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgj-YB-Zfl" userLabel="lblAmount">
                                                             <rect key="frame" x="306.5" y="18" width="44.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                             <nil key="textColor"/>
@@ -136,7 +140,7 @@
                                                         <constraint firstItem="KTH-zl-Gbu" firstAttribute="leading" secondItem="Rgj-YB-Zfl" secondAttribute="trailing" constant="5" id="buf-4B-Uz5"/>
                                                         <constraint firstItem="wha-Rm-vYX" firstAttribute="leading" secondItem="XsM-7x-vFE" secondAttribute="leading" constant="10" id="bxp-ju-m6e"/>
                                                         <constraint firstItem="KTH-zl-Gbu" firstAttribute="centerY" secondItem="XsM-7x-vFE" secondAttribute="centerY" id="eac-pT-47n"/>
-                                                        <constraint firstItem="Rgj-YB-Zfl" firstAttribute="leading" secondItem="Wee-34-9SV" secondAttribute="trailing" constant="10" id="pWJ-ep-YEp"/>
+                                                        <constraint firstItem="Rgj-YB-Zfl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wee-34-9SV" secondAttribute="trailing" constant="10" id="pWJ-ep-YEp"/>
                                                         <constraint firstItem="Rgj-YB-Zfl" firstAttribute="centerY" secondItem="XsM-7x-vFE" secondAttribute="centerY" id="s7u-xx-f8R"/>
                                                     </constraints>
                                                 </view>

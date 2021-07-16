@@ -44,7 +44,9 @@ class AccountViewController: UIViewController {
     private func bindViewModel() {
         guard let viewModel = viewModel else {return}
         viewModel.$accounts.sink { [weak self] _ in
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }.store(in: &cancellables)
     }
 }
