@@ -62,7 +62,7 @@ extension AccountViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewCell.cellIdentifier, for: indexPath) as! AccountTableViewCell
         let account = viewModel.accounts![indexPath.row]
         
-        cell.lblTitle.text = account.name
+        cell.configureWithAccount(account: account)
         
         return cell
     }

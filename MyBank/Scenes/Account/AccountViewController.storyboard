@@ -117,15 +117,15 @@
                                                                 <constraint firstItem="N2F-Xr-HvA" firstAttribute="leading" secondItem="Wee-34-9SV" secondAttribute="leading" id="xSS-LP-llc"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-zl-Gbu" userLabel="lblCurrency">
-                                                            <rect key="frame" x="356" y="19.5" width="28" height="16.5"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="27000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgj-YB-Zfl" userLabel="lblBalance">
+                                                            <rect key="frame" x="306.5" y="18" width="44.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="27000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgj-YB-Zfl" userLabel="lblAmount">
-                                                            <rect key="frame" x="306.5" y="18" width="44.5" height="19"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-zl-Gbu" userLabel="lblCurrency">
+                                                            <rect key="frame" x="356" y="19.5" width="28" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -156,6 +156,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="bgView" destination="XsM-7x-vFE" id="k5m-fW-rEO"/>
+                                            <outlet property="lblBalance" destination="Rgj-YB-Zfl" id="nwO-ze-wOE"/>
+                                            <outlet property="lblCurrency" destination="KTH-zl-Gbu" id="acR-uJ-sQZ"/>
+                                            <outlet property="lblSubtitle" destination="N2F-Xr-HvA" id="2RT-BD-Btu"/>
                                             <outlet property="lblTitle" destination="AEL-kT-3qz" id="4Tp-gd-fWv"/>
                                         </connections>
                                     </tableViewCell>

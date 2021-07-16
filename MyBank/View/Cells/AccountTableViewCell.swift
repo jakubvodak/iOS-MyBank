@@ -17,6 +17,9 @@ class AccountTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblSubtitle: UILabel!
+    @IBOutlet weak var lblBalance: UILabel!
+    @IBOutlet weak var lblCurrency: UILabel!
     
     // MARK: - Object Lifecycle
     
@@ -29,5 +32,12 @@ class AccountTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         lblTitle.text = String()
+    }
+    
+    func configureWithAccount(account: Account) {
+        lblTitle.text = account.name
+        lblSubtitle.text = String(account.number ?? 0)
+        lblBalance.text = String(account.balance ?? 0)
+        lblCurrency.text = account.currency
     }
 }
