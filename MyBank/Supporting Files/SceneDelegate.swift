@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
+        //let accountFetcher = AccountFetcher(session: session)
         let accountFetcher = AccountFetcher()
         let accountViewModel = AccountViewModel(accountFetcher: accountFetcher)
         
@@ -73,5 +74,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().isTranslucent = false
     }
 
+    func configureURLSessoin() -> URLSession {
+        
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        return URLSession(configuration: config)
+    }
 }
 

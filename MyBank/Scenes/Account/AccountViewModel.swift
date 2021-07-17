@@ -8,12 +8,20 @@
 import Foundation
 import Combine
 
+enum AccountViewModelDataState {
+    case dataLoading
+    case dataReady
+    case dataFail
+}
+
 class AccountViewModel: ObservableObject {
 
     // MARK: - Variables
     
-    private let accountFetcher: AccountFetcher
     @Published var accounts: [Account]?
+    @Published var dataState: AccountViewModelDataState = .dataFail
+    
+    private let accountFetcher: AccountFetcher
     
     // MARK: - Object Lifecycle
     
@@ -25,8 +33,18 @@ class AccountViewModel: ObservableObject {
     
     func fetchAccounts() {
         
+        if dataState == .dataLoading { return }
+        dataState = .dataLoading
+        
         accountFetcher.fetchAccounts(completionHandler: { [weak self] response, error in
-            self?.accounts = response?.accounts
+            
+            if let data = response, !data.accounts.isEmpty {
+                self?.accounts = data.accounts
+                self?.dataState = .dataReady
+            }
+            else {
+                self?.dataState = .dataFail
+            }
         })
     }
 }

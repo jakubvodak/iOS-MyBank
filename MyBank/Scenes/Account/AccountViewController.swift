@@ -18,9 +18,11 @@ class AccountViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var btnTransfers: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Object Lifecycle
     
@@ -33,23 +35,44 @@ class AccountViewController: UIViewController {
     
     private func configureView() {
      
-        navigationController?.title = "Wallet"
+        //navigationController?.title = "Wallet"
         
-        //headerView.layer.cornerRadius = 10
         btnSend.layer.cornerRadius = 10
         btnTransfers.layer.cornerRadius = 10
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
     }
 
+    private func reloadView() {
+        
+        tableView.reloadData()
+        tableView.isHidden = viewModel.dataState != .dataReady
+        emptyView.isHidden = viewModel.dataState != .dataFail
+        btnSend.isEnabled = viewModel.dataState == .dataReady
+        btnTransfers.isEnabled = viewModel.dataState == .dataReady
+        activityIndicator.isHidden = viewModel.dataState != .dataLoading
+    }
+    
     // MARK: - Data Binding
     
     private func bindViewModel() {
         guard let viewModel = viewModel else {return}
-        viewModel.$accounts.sink { [weak self] _ in
-            DispatchQueue.main.async {
+        viewModel.$accounts
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
                 self?.tableView.reloadData()
-            }
-        }.store(in: &cancellables)
+            }.store(in: &cancellables)
+        
+        viewModel.$dataState
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.reloadView()
+            }.store(in: &cancellables)
+    }
+    
+    // MARK: - Action
+    
+    @IBAction func reloadData() {
+        viewModel.fetchAccounts()
     }
 }
 

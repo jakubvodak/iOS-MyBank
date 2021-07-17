@@ -16,6 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEH-vJ-0A2" userLabel="EmptyView">
+                                <rect key="frame" x="176" y="515.5" width="62" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edC-ke-gjo" userLabel="lblEmpty">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-wL-nFH" userLabel="btnRefresh">
+                                        <rect key="frame" x="0.0" y="24" width="62" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="Retry"/>
+                                        <connections>
+                                            <action selector="reloadData" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cjB-qr-W4w"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0cV-wL-nFH" firstAttribute="top" secondItem="edC-ke-gjo" secondAttribute="bottom" constant="5" id="91A-Mn-oUk"/>
+                                    <constraint firstItem="edC-ke-gjo" firstAttribute="leading" secondItem="eEH-vJ-0A2" secondAttribute="leading" id="Afm-uC-4TR"/>
+                                    <constraint firstAttribute="bottom" secondItem="0cV-wL-nFH" secondAttribute="bottom" id="Jjq-BA-849"/>
+                                    <constraint firstItem="0cV-wL-nFH" firstAttribute="leading" secondItem="eEH-vJ-0A2" secondAttribute="leading" id="OXX-cJ-mb3"/>
+                                    <constraint firstAttribute="trailing" secondItem="edC-ke-gjo" secondAttribute="trailing" id="PlH-Xp-960"/>
+                                    <constraint firstItem="edC-ke-gjo" firstAttribute="top" secondItem="eEH-vJ-0A2" secondAttribute="top" id="dT7-xW-UWj"/>
+                                    <constraint firstAttribute="trailing" secondItem="0cV-wL-nFH" secondAttribute="trailing" id="snz-8m-WsZ"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-WL-63E" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="180"/>
                                 <subviews>
@@ -167,12 +196,21 @@
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="2hs-XC-0gX"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-Rd-bJM">
+                                <rect key="frame" x="188.5" y="524.5" width="37" height="37"/>
+                                <color key="tintColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F6L-WL-63E" secondAttribute="trailing" id="2MI-sn-Vcf"/>
+                            <constraint firstItem="Ilt-Rd-bJM" firstAttribute="centerY" secondItem="YzF-CF-do9" secondAttribute="centerY" id="3mu-PB-GjN"/>
+                            <constraint firstItem="Ilt-Rd-bJM" firstAttribute="centerX" secondItem="YzF-CF-do9" secondAttribute="centerX" id="77z-na-gdT"/>
                             <constraint firstItem="F6L-WL-63E" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Nkp-V5-hTD"/>
+                            <constraint firstItem="eEH-vJ-0A2" firstAttribute="centerX" secondItem="YzF-CF-do9" secondAttribute="centerX" id="QdJ-02-Fzf"/>
+                            <constraint firstItem="eEH-vJ-0A2" firstAttribute="centerY" secondItem="YzF-CF-do9" secondAttribute="centerY" id="ccy-Fa-DRk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YzF-CF-do9" secondAttribute="bottom" id="lXu-df-Fc3"/>
                             <constraint firstItem="F6L-WL-63E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ltO-ed-0O3"/>
                             <constraint firstItem="YzF-CF-do9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="squ-SL-gY5"/>
@@ -181,8 +219,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Ilt-Rd-bJM" id="ZyX-tg-hvH"/>
                         <outlet property="btnSend" destination="qZj-fd-hUS" id="gve-7Z-I8D"/>
                         <outlet property="btnTransfers" destination="1Fv-aB-JU4" id="wht-ta-U1h"/>
+                        <outlet property="emptyView" destination="eEH-vJ-0A2" id="eVG-Ca-u7U"/>
                         <outlet property="headerView" destination="F6L-WL-63E" id="7rU-ke-R9d"/>
                         <outlet property="tableView" destination="YzF-CF-do9" id="wop-xj-R45"/>
                     </connections>
