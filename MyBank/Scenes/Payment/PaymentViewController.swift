@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class PaymentViewController: UIViewController {
+class PaymentViewController: UITableViewController {
 
     // MARK: - Variables
     
@@ -27,4 +27,12 @@ class PaymentViewController: UIViewController {
         self.title = "Send Money"
     
     }
+    
+    // MARK: - TableView
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }
