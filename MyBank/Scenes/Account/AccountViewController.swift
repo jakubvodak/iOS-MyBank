@@ -35,7 +35,7 @@ class AccountViewController: UIViewController {
     
     private func configureView() {
      
-        //navigationController?.title = "Wallet"
+        self.title = "Wallet"
         
         btnSend.layer.cornerRadius = 10
         btnTransfers.layer.cornerRadius = 10
@@ -73,6 +73,23 @@ class AccountViewController: UIViewController {
     
     @IBAction func reloadData() {
         viewModel.fetchAccounts()
+    }
+    
+    @IBAction func sendMoney() {
+        
+        guard let accounts = viewModel.accounts else { return }
+        let paymentViewModel = PaymentViewModel(accounts: accounts)
+        
+        let storyboard = UIStoryboard(name: "PaymentViewController", bundle: nil)
+        let paymentViewController = storyboard.instantiateInitialViewController() as! PaymentViewController
+        paymentViewController.viewModel = paymentViewModel
+        
+        let navigationController = UINavigationController(rootViewController: paymentViewController)
+        present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func transferHistory() {
+        
     }
 }
 

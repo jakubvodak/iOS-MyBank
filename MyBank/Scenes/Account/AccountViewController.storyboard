@@ -70,6 +70,9 @@
                                         <state key="normal" title="Send Money">
                                             <color key="titleColor" red="0.10588235294117647" green="0.27843137254901962" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendMoney" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vrN-fI-jT2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-aB-JU4" userLabel="btnAllTransfers">
                                         <rect key="frame" x="198" y="116" width="196" height="40"/>
@@ -81,6 +84,9 @@
                                         <state key="normal" title="Transfer History">
                                             <color key="titleColor" red="0.10588235294117647" green="0.27843137254901962" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="transferHistory" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ni8-ad-pZx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.27843137254901962" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

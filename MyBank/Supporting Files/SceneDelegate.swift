@@ -69,8 +69,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func configureNavBarAppearance() {
         
         UINavigationBar.appearance().barTintColor = .systemGray5
-        UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor = .blue
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.myBankBlue]
         UINavigationBar.appearance().isTranslucent = false
     }
 

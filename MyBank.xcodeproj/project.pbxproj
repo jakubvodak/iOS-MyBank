@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CB033E8C26A14E1F00456E76 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */; };
+		CB033E8E26A3638C00456E76 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E8D26A3638C00456E76 /* PaymentViewController.swift */; };
+		CB033E9026A3639700456E76 /* PaymentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB033E8F26A3639700456E76 /* PaymentViewController.storyboard */; };
+		CB033E9226A363A600456E76 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9126A363A600456E76 /* PaymentViewModel.swift */; };
+		CB033E9526A36B3F00456E76 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9426A36B3F00456E76 /* UIColor+Extension.swift */; };
+		CB033E9726A36C6800456E76 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9626A36C6800456E76 /* Transfer.swift */; };
 		CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392507269DE911002F1F29 /* AppDelegate.swift */; };
 		CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392509269DE911002F1F29 /* SceneDelegate.swift */; };
 		CB39250E269DE913002F1F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB39250D269DE913002F1F29 /* Assets.xcassets */; };
@@ -43,6 +48,11 @@
 
 /* Begin PBXFileReference section */
 		CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		CB033E8D26A3638C00456E76 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		CB033E8F26A3639700456E76 /* PaymentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentViewController.storyboard; sourceTree = "<group>"; };
+		CB033E9126A363A600456E76 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		CB033E9426A36B3F00456E76 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CB033E9626A36C6800456E76 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		CB392504269DE911002F1F29 /* MyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB392507269DE911002F1F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB392509269DE911002F1F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +114,14 @@
 				CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CB033E9326A36B2E00456E76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB033E9426A36B3F00456E76 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CB3924FB269DE911002F1F29 = {
@@ -215,6 +233,9 @@
 		CB39253C269DEDE7002F1F29 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				CB033E8D26A3638C00456E76 /* PaymentViewController.swift */,
+				CB033E8F26A3639700456E76 /* PaymentViewController.storyboard */,
+				CB033E9126A363A600456E76 /* PaymentViewModel.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -222,6 +243,7 @@
 		CB392541269DF233002F1F29 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CB033E9326A36B2E00456E76 /* Extensions */,
 				CB392542269DF239002F1F29 /* Networking */,
 			);
 			path = Services;
@@ -241,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				CB392548269DF5AF002F1F29 /* Account.swift */,
+				CB033E9626A36C6800456E76 /* Transfer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +373,7 @@
 			files = (
 				CB392514269DE913002F1F29 /* LaunchScreen.storyboard in Resources */,
 				CB392511269DE913002F1F29 /* Preview Assets.xcassets in Resources */,
+				CB033E9026A3639700456E76 /* PaymentViewController.storyboard in Resources */,
 				CB39255526A01466002F1F29 /* AccountViewController.storyboard in Resources */,
 				CB39250E269DE913002F1F29 /* Assets.xcassets in Resources */,
 			);
@@ -379,12 +403,16 @@
 				CB392547269DF57B002F1F29 /* Responses.swift in Sources */,
 				CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */,
 				CB392551269FFC8E002F1F29 /* AccountError.swift in Sources */,
+				CB033E9526A36B3F00456E76 /* UIColor+Extension.swift in Sources */,
 				CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */,
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
 				CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */,
 				CB033E8C26A14E1F00456E76 /* AccountTableViewCell.swift in Sources */,
+				CB033E8E26A3638C00456E76 /* PaymentViewController.swift in Sources */,
 				CB392549269DF5AF002F1F29 /* Account.swift in Sources */,
 				CB39255326A012F7002F1F29 /* AccountViewController.swift in Sources */,
+				CB033E9226A363A600456E76 /* PaymentViewModel.swift in Sources */,
+				CB033E9726A36C6800456E76 /* Transfer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
