@@ -101,9 +101,11 @@ class AccountViewController: UIViewController {
         transfersViewController.viewModel = transfersViewModel
         
         if let _ = forAccount {
+            transfersViewController.transition = .pushed
             navigationController?.pushViewController(transfersViewController, animated: true)
         }
         else {
+            transfersViewController.transition = .presented
             let navigationController = UINavigationController(rootViewController: transfersViewController)
             present(navigationController, animated: true, completion: nil)
         }
