@@ -52,9 +52,11 @@ class AccountViewModel: ObservableObject {
     
     func fetchTransfers() {
         transfers = [Transfer]()
+        //ToDo: Persistent fetch
     }
     
     func appendTransfer(transfer: Transfer) {
         transfers?.append(transfer)
+        //ToDo: Persistent storage
     }
 }
