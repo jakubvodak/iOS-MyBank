@@ -8,5 +8,7 @@
 import Foundation
 
 struct Transfer: Codable {
-    
+    var sender: Account?
+    var receiver: Float?
+    var amount: Double?
 }

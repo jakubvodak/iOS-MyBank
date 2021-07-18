@@ -164,6 +164,11 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="lblAmountAvailable" destination="d2p-Fr-GrI" id="FAf-Vu-X0e"/>
+                        <outlet property="lblAmountAvailableCurrency" destination="aMv-Ne-03w" id="F85-qW-obf"/>
+                        <outlet property="lblAmountSendCurrency" destination="SG5-Un-dAj" id="QdQ-z3-EDe"/>
+                        <outlet property="txtAmount" destination="q7M-T5-DS6" id="6Mf-i9-xm0"/>
+                        <outlet property="txtReceiver" destination="kx5-us-Qnd" id="bwh-dy-0B5"/>
                         <outlet property="txtSender" destination="rj7-qE-fs9" id="mQ7-NY-dHx"/>
                     </connections>
                 </tableViewController>
