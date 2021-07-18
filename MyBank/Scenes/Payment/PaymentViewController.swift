@@ -14,6 +14,13 @@ class PaymentViewController: UITableViewController {
     
     var viewModel: PaymentViewModel!
     
+    // MARK: - Outlets
+    
+        // MARK: Sender
+    
+    @IBOutlet weak var txtSender: UITextField!
+    
+    
     // MARK: - Object Lifecycle
     
     override func viewDidLoad() {

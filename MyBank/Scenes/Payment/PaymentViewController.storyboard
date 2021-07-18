@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="sectionIndexBackgroundColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" name="MyBankBlue"/>
                         <sections>
                             <tableViewSection id="rlN-S6-Zpd">
                                 <cells>
@@ -32,10 +33,42 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345 (Test Account)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rj7-qE-fs9" userLabel="txtAccount" customClass="CustomTextField" customModule="MyBank" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="34.5" width="282" height="34"/>
+                                                    <color key="backgroundColor" name="MyBankBlue"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" systemColor="systemGray5Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2p-Fr-GrI" userLabel="lblAmountAvailable">
+                                                    <rect key="frame" x="322" y="43" width="39" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMv-Ne-03w" userLabel="lblCurrency">
+                                                    <rect key="frame" x="366" y="43" width="28" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="aMv-Ne-03w" firstAttribute="centerY" secondItem="d2p-Fr-GrI" secondAttribute="centerY" id="6PJ-Pl-3l0"/>
+                                                <constraint firstItem="rj7-qE-fs9" firstAttribute="leading" secondItem="zdr-vk-c62" secondAttribute="leading" constant="20" id="Cbl-QZ-AiH"/>
+                                                <constraint firstItem="d2p-Fr-GrI" firstAttribute="leading" secondItem="rj7-qE-fs9" secondAttribute="trailing" constant="20" id="Fjm-D9-UuO"/>
+                                                <constraint firstItem="rj7-qE-fs9" firstAttribute="top" secondItem="wNn-O6-QrD" secondAttribute="bottom" constant="5" id="PMW-XD-mVJ"/>
+                                                <constraint firstItem="d2p-Fr-GrI" firstAttribute="centerY" secondItem="rj7-qE-fs9" secondAttribute="centerY" id="STy-Qt-Sv6"/>
+                                                <constraint firstAttribute="trailing" secondItem="aMv-Ne-03w" secondAttribute="trailing" constant="20" id="ddl-jG-wFu"/>
                                                 <constraint firstItem="wNn-O6-QrD" firstAttribute="leading" secondItem="zdr-vk-c62" secondAttribute="leading" constant="20" id="epc-BD-3uL"/>
                                                 <constraint firstItem="wNn-O6-QrD" firstAttribute="top" secondItem="zdr-vk-c62" secondAttribute="top" constant="10" id="rYB-sg-rp9"/>
+                                                <constraint firstItem="aMv-Ne-03w" firstAttribute="leading" secondItem="d2p-Fr-GrI" secondAttribute="trailing" constant="5" id="rp5-hd-kdW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -53,10 +86,26 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12345" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-us-Qnd" userLabel="txtReceiver" customClass="CustomTextField" customModule="MyBank" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="35.5" width="374" height="34"/>
+                                                    <color key="backgroundColor" name="MyBankBlue"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" smartDashesType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="kx5-us-Qnd" firstAttribute="top" secondItem="kQi-At-bZe" secondAttribute="bottom" constant="5" id="43M-2g-ET4"/>
+                                                <constraint firstItem="kx5-us-Qnd" firstAttribute="leading" secondItem="N3a-6I-g01" secondAttribute="leading" constant="20" id="Hc5-aA-XJz"/>
                                                 <constraint firstItem="kQi-At-bZe" firstAttribute="top" secondItem="N3a-6I-g01" secondAttribute="top" constant="11" id="KR6-2a-eJy"/>
                                                 <constraint firstItem="kQi-At-bZe" firstAttribute="leading" secondItem="N3a-6I-g01" secondAttribute="leading" constant="20" symbolic="YES" id="f7g-II-71l"/>
+                                                <constraint firstAttribute="trailing" secondItem="kx5-us-Qnd" secondAttribute="trailing" constant="20" id="xik-0U-M33"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,10 +123,34 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7M-T5-DS6" userLabel="txtAmount" customClass="CustomTextField" customModule="MyBank" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="33.5" width="326" height="34"/>
+                                                    <color key="backgroundColor" name="MyBankBlue"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CZK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG5-Un-dAj" userLabel="lblCurrency">
+                                                    <rect key="frame" x="366" y="42" width="28" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="q7M-T5-DS6" firstAttribute="leading" secondItem="yZj-dm-AtB" secondAttribute="leading" constant="20" id="Nc5-Ce-3f4"/>
                                                 <constraint firstItem="BvJ-io-bi9" firstAttribute="top" secondItem="yZj-dm-AtB" secondAttribute="top" constant="10" id="WYd-hT-Wai"/>
+                                                <constraint firstItem="SG5-Un-dAj" firstAttribute="leading" secondItem="q7M-T5-DS6" secondAttribute="trailing" constant="20" id="cs0-2a-arO"/>
+                                                <constraint firstItem="q7M-T5-DS6" firstAttribute="top" secondItem="BvJ-io-bi9" secondAttribute="bottom" constant="5" id="hUo-PG-89n"/>
                                                 <constraint firstItem="BvJ-io-bi9" firstAttribute="leading" secondItem="yZj-dm-AtB" secondAttribute="leading" constant="20" id="hzs-Vo-dCQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="SG5-Un-dAj" secondAttribute="trailing" constant="20" id="pKq-nK-uhv"/>
+                                                <constraint firstItem="SG5-Un-dAj" firstAttribute="centerY" secondItem="q7M-T5-DS6" secondAttribute="centerY" id="qng-vs-FHm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.117004551" green="0.26923260090000001" blue="0.56081289050000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -90,10 +163,24 @@
                             <outlet property="delegate" destination="qzD-Bc-CmA" id="Tcu-Is-epj"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="txtSender" destination="rj7-qE-fs9" id="mQ7-NY-dHx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ko-Sa-0lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="MyBankBlue">
+            <color red="0.15299999713897705" green="0.27399998903274536" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
