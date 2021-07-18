@@ -89,11 +89,28 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func transferHistory() {
+        transferHistory(forAccount: nil)
+    }
+    
+    func transferHistory(forAccount: Account?) {
+        guard let transfers = viewModel.transfers else { return }
+        let transfersViewModel = TransfersViewModel(account: forAccount, transfers: transfers)
         
+        let storyboard = UIStoryboard(name: "TransfersViewController", bundle: nil)
+        let transfersViewController = storyboard.instantiateInitialViewController() as! TransfersViewController
+        transfersViewController.viewModel = transfersViewModel
+        
+        if let _ = forAccount {
+            navigationController?.pushViewController(transfersViewController, animated: true)
+        }
+        else {
+            let navigationController = UINavigationController(rootViewController: transfersViewController)
+            present(navigationController, animated: true, completion: nil)
+        }
     }
 }
 
-extension AccountViewController: UITableViewDataSource {
+extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.accounts?.count ?? 0
@@ -107,5 +124,10 @@ extension AccountViewController: UITableViewDataSource {
         cell.configureWithAccount(account: account)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let accounts = viewModel.accounts else { return }
+        transferHistory(forAccount: accounts[indexPath.row])
     }
 }

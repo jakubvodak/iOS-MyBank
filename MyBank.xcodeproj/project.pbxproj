@@ -14,6 +14,9 @@
 		CB033E9526A36B3F00456E76 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9426A36B3F00456E76 /* UIColor+Extension.swift */; };
 		CB033E9726A36C6800456E76 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9626A36C6800456E76 /* Transfer.swift */; };
 		CB033E9A26A4601D00456E76 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9926A4601D00456E76 /* CustomTextField.swift */; };
+		CB033E9C26A47A0400456E76 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9B26A47A0400456E76 /* TransfersViewController.swift */; };
+		CB033E9E26A47A1200456E76 /* TransfersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB033E9D26A47A1200456E76 /* TransfersViewController.storyboard */; };
+		CB033EA026A47A2900456E76 /* TransfersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9F26A47A2900456E76 /* TransfersViewModel.swift */; };
 		CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392507269DE911002F1F29 /* AppDelegate.swift */; };
 		CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392509269DE911002F1F29 /* SceneDelegate.swift */; };
 		CB39250E269DE913002F1F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB39250D269DE913002F1F29 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 		CB033E9426A36B3F00456E76 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CB033E9626A36C6800456E76 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		CB033E9926A4601D00456E76 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CB033E9B26A47A0400456E76 /* TransfersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		CB033E9D26A47A1200456E76 /* TransfersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransfersViewController.storyboard; sourceTree = "<group>"; };
+		CB033E9F26A47A2900456E76 /* TransfersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewModel.swift; sourceTree = "<group>"; };
 		CB392504269DE911002F1F29 /* MyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB392507269DE911002F1F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB392509269DE911002F1F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +243,9 @@
 		CB39253B269DEDDA002F1F29 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				CB033E9B26A47A0400456E76 /* TransfersViewController.swift */,
+				CB033E9D26A47A1200456E76 /* TransfersViewController.storyboard */,
+				CB033E9F26A47A2900456E76 /* TransfersViewModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -382,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB033E9E26A47A1200456E76 /* TransfersViewController.storyboard in Resources */,
 				CB392514269DE913002F1F29 /* LaunchScreen.storyboard in Resources */,
 				CB392511269DE913002F1F29 /* Preview Assets.xcassets in Resources */,
 				CB033E9026A3639700456E76 /* PaymentViewController.storyboard in Resources */,
@@ -414,9 +424,11 @@
 				CB033E9A26A4601D00456E76 /* CustomTextField.swift in Sources */,
 				CB392547269DF57B002F1F29 /* Responses.swift in Sources */,
 				CB392540269DEF02002F1F29 /* AccountViewModel.swift in Sources */,
+				CB033E9C26A47A0400456E76 /* TransfersViewController.swift in Sources */,
 				CB392551269FFC8E002F1F29 /* AccountError.swift in Sources */,
 				CB033E9526A36B3F00456E76 /* UIColor+Extension.swift in Sources */,
 				CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */,
+				CB033EA026A47A2900456E76 /* TransfersViewModel.swift in Sources */,
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
 				CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */,
 				CB033E8C26A14E1F00456E76 /* AccountTableViewCell.swift in Sources */,

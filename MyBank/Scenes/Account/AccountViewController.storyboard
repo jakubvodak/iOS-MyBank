@@ -200,6 +200,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="2hs-XC-0gX"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="gDo-g9-SqH"/>
                                 </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ilt-Rd-bJM">

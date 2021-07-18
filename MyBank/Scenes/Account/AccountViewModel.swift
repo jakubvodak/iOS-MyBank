@@ -19,6 +19,7 @@ class AccountViewModel: ObservableObject {
     // MARK: - Variables
     
     @Published var accounts: [Account]?
+    @Published var transfers: [Transfer]?
     @Published var dataState: AccountViewModelDataState = .dataFail
     
     private let accountFetcher: AccountFetcher
@@ -29,6 +30,7 @@ class AccountViewModel: ObservableObject {
         self.accountFetcher = accountFetcher
         
         fetchAccounts()
+        fetchTransfers()
     }
     
     func fetchAccounts() {
@@ -46,5 +48,9 @@ class AccountViewModel: ObservableObject {
                 self?.dataState = .dataFail
             }
         })
+    }
+    
+    func fetchTransfers() {
+        transfers = [Transfer]()
     }
 }

@@ -40,7 +40,7 @@ class PaymentViewController: UITableViewController {
      
         title = "Send Money"
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(closeAction))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirm", style: .done, target: self, action: #selector(confirmAction))
         
         txtSender.inputView = senderAccountPicker
@@ -70,12 +70,16 @@ class PaymentViewController: UITableViewController {
     }
     
     private func displaySuccess() {
-        
+        let alert = UIAlertController(title: "Success", message: "Transfer completed", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { [weak self] _ in
+            self?.closeAction()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Action
     
-    @objc func cancelAction() {
+    @objc func closeAction() {
         dismiss(animated: true, completion: nil)
     }
     
@@ -90,7 +94,8 @@ class PaymentViewController: UITableViewController {
             displayError(error: error)
         }
         else {
-            
+            //TODO store transfer
+            displaySuccess()
         }
     }
     
