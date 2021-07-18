@@ -76,6 +76,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="bgView" destination="hEq-z3-Md4" id="Zaw-Pk-arw"/>
+                                            <outlet property="lblAccount" destination="ZF9-sf-Qu7" id="VMQ-Ph-Zfg"/>
+                                            <outlet property="lblAmount" destination="jm5-NN-fEi" id="gC1-WF-hdb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
