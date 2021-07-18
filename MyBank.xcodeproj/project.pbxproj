@@ -17,6 +17,7 @@
 		CB033E9C26A47A0400456E76 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9B26A47A0400456E76 /* TransfersViewController.swift */; };
 		CB033E9E26A47A1200456E76 /* TransfersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB033E9D26A47A1200456E76 /* TransfersViewController.storyboard */; };
 		CB033EA026A47A2900456E76 /* TransfersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033E9F26A47A2900456E76 /* TransfersViewModel.swift */; };
+		CB033EA226A4859900456E76 /* TransferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB033EA126A4859900456E76 /* TransferTableViewCell.swift */; };
 		CB392508269DE911002F1F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392507269DE911002F1F29 /* AppDelegate.swift */; };
 		CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB392509269DE911002F1F29 /* SceneDelegate.swift */; };
 		CB39250E269DE913002F1F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB39250D269DE913002F1F29 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		CB033E9B26A47A0400456E76 /* TransfersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
 		CB033E9D26A47A1200456E76 /* TransfersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransfersViewController.storyboard; sourceTree = "<group>"; };
 		CB033E9F26A47A2900456E76 /* TransfersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewModel.swift; sourceTree = "<group>"; };
+		CB033EA126A4859900456E76 /* TransferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewCell.swift; sourceTree = "<group>"; };
 		CB392504269DE911002F1F29 /* MyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB392507269DE911002F1F29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB392509269DE911002F1F29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CB033E8B26A14E1F00456E76 /* AccountTableViewCell.swift */,
+				CB033EA126A4859900456E76 /* TransferTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				CB39250A269DE911002F1F29 /* SceneDelegate.swift in Sources */,
 				CB39254D269DF662002F1F29 /* AccountFetcher.swift in Sources */,
 				CB033E8C26A14E1F00456E76 /* AccountTableViewCell.swift in Sources */,
+				CB033EA226A4859900456E76 /* TransferTableViewCell.swift in Sources */,
 				CB033E8E26A3638C00456E76 /* PaymentViewController.swift in Sources */,
 				CB392549269DF5AF002F1F29 /* Account.swift in Sources */,
 				CB39255326A012F7002F1F29 /* AccountViewController.swift in Sources */,
