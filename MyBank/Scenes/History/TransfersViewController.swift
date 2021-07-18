@@ -22,6 +22,7 @@ class TransfersViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lblEmpty: UILabel!
     
     // MARK: - Object Lifecycle
     
@@ -29,6 +30,7 @@ class TransfersViewController: UIViewController {
         super.viewDidLoad()
 
         configureView()
+        reloadView()
     }
     
     private func configureView() {
@@ -45,6 +47,12 @@ class TransfersViewController: UIViewController {
         }
         
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+    }
+    
+    private func reloadView() {
+        
+        tableView.reloadData()
+        lblEmpty.isHidden = true
     }
     
     // MARK: - Action

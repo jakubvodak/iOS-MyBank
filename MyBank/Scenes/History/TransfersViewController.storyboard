@@ -39,7 +39,7 @@
                                                                 <constraint firstAttribute="width" secondItem="vbe-ik-yt5" secondAttribute="height" multiplier="1:1" id="xYt-m5-hb9"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-sf-Qu7" userLabel="lblAccount">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Test Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-sf-Qu7" userLabel="lblAccount">
                                                             <rect key="frame" x="40.5" y="11" width="93.5" height="19"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                             <nil key="textColor"/>
@@ -58,6 +58,7 @@
                                                         <constraint firstItem="ZF9-sf-Qu7" firstAttribute="leading" secondItem="vbe-ik-yt5" secondAttribute="trailing" constant="10" id="6Kj-93-12a"/>
                                                         <constraint firstAttribute="bottom" secondItem="vbe-ik-yt5" secondAttribute="bottom" constant="10" id="RbU-G7-uWJ"/>
                                                         <constraint firstItem="jm5-NN-fEi" firstAttribute="centerY" secondItem="hEq-z3-Md4" secondAttribute="centerY" id="cRd-IZ-x0m"/>
+                                                        <constraint firstItem="jm5-NN-fEi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZF9-sf-Qu7" secondAttribute="trailing" constant="10" id="cgb-zU-DcT"/>
                                                         <constraint firstItem="vbe-ik-yt5" firstAttribute="leading" secondItem="hEq-z3-Md4" secondAttribute="leading" constant="10" id="uzy-cK-sjs"/>
                                                         <constraint firstItem="vbe-ik-yt5" firstAttribute="top" secondItem="hEq-z3-Md4" secondAttribute="top" constant="10" id="wnG-7f-qbS"/>
                                                         <constraint firstAttribute="trailing" secondItem="jm5-NN-fEi" secondAttribute="trailing" constant="10" id="y5p-1B-icf"/>
@@ -83,17 +84,26 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="dJj-OK-x0s"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Transfers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyX-1l-Rtb" userLabel="lblEmpty">
+                                <rect key="frame" x="159" y="443" width="96.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="MyBankBlue"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qKQ-OB-Uyu" secondAttribute="bottom" id="4qa-oQ-fV0"/>
                             <constraint firstItem="qKQ-OB-Uyu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="A51-Tk-4Qd"/>
+                            <constraint firstItem="cyX-1l-Rtb" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="QE5-nC-zyK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qKQ-OB-Uyu" secondAttribute="trailing" constant="10" id="R4K-mg-pes"/>
                             <constraint firstItem="qKQ-OB-Uyu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b7H-XL-PL2"/>
+                            <constraint firstItem="cyX-1l-Rtb" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="rpY-qU-9af"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblEmpty" destination="cyX-1l-Rtb" id="0cF-Th-3aZ"/>
                         <outlet property="tableView" destination="qKQ-OB-Uyu" id="YYX-vi-wtu"/>
                     </connections>
                 </viewController>
