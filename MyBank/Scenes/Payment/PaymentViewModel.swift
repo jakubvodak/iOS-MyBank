@@ -45,7 +45,7 @@ class PaymentViewModel: ObservableObject {
     func transferFormError() -> PaymentError? {
         
         guard let _ = transfer.receiver else { return .wrongReceiverAccount }
-        guard let _ = transfer.amount else { return .wrongAmount }
+        guard let amount = transfer.amount, amount > 0 else { return .wrongAmount }
         guard let amount = transfer.amount,
               let balance = transfer.sender?.balance,
               amount < balance else { return .insuficientAmount }

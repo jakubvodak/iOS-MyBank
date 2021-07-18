@@ -9,6 +9,6 @@ import Foundation
 
 struct Transfer: Codable {
     var sender: Account?
-    var receiver: Float?
+    var receiver: UInt?
     var amount: Double?
 }

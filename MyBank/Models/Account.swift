@@ -9,7 +9,7 @@ import Foundation
 
 struct Account: Codable {
     let name: String?
-    let number: Int?
+    let number: UInt?
     let currency: String?
     let balance: Double?
 }

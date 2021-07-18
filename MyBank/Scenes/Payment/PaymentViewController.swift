@@ -86,7 +86,7 @@ class PaymentViewController: UITableViewController {
     @objc func confirmAction() {
         
         //Store values
-        viewModel.transfer.receiver = Float(txtReceiver.text ?? String())
+        viewModel.transfer.receiver = UInt(txtReceiver.text ?? String())
         viewModel.transfer.amount = Double(txtAmount.text ?? String())
         
         //Validation
