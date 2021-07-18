@@ -33,6 +33,19 @@ class PaymentViewController: UITableViewController {
      
         self.title = "Send Money"
     
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Confirm", style: .done, target: self, action: #selector(confirmAction))
+    }
+    
+    // MARK: - Action
+    
+    @objc func cancelAction() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func confirmAction() {
+        
+        
     }
     
     // MARK: - TableView
