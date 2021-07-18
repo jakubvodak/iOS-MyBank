@@ -83,6 +83,7 @@ class AccountViewController: UIViewController {
         let storyboard = UIStoryboard(name: "PaymentViewController", bundle: nil)
         let paymentViewController = storyboard.instantiateInitialViewController() as! PaymentViewController
         paymentViewController.viewModel = paymentViewModel
+        paymentViewController.delegate = self
         
         let navigationController = UINavigationController(rootViewController: paymentViewController)
         present(navigationController, animated: true, completion: nil)
@@ -131,5 +132,12 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let accounts = viewModel.accounts else { return }
         transferHistory(forAccount: accounts[indexPath.row])
+    }
+}
+
+extension AccountViewController: PaymentViewControllerDelegate {
+    
+    func paymentViewControllerDidCompleteTransfer(transfer: Transfer) {
+        viewModel.appendTransfer(transfer: transfer)
     }
 }

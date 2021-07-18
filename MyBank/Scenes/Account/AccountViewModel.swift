@@ -53,4 +53,8 @@ class AccountViewModel: ObservableObject {
     func fetchTransfers() {
         transfers = [Transfer]()
     }
+    
+    func appendTransfer(transfer: Transfer) {
+        transfers?.append(transfer)
+    }
 }

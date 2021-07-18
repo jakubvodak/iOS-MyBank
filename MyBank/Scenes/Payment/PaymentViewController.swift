@@ -8,12 +8,17 @@
 import UIKit
 import Combine
 
+protocol PaymentViewControllerDelegate: NSObjectProtocol {
+    func paymentViewControllerDidCompleteTransfer(transfer: Transfer)
+}
+
 class PaymentViewController: UITableViewController {
 
     // MARK: - Variables
     
     var viewModel: PaymentViewModel!
     let senderAccountPicker = UIPickerView()
+    weak var delegate: PaymentViewControllerDelegate!
     
     // MARK: - Outlets
     
@@ -94,7 +99,7 @@ class PaymentViewController: UITableViewController {
             displayError(error: error)
         }
         else {
-            //TODO store transfer
+            delegate.paymentViewControllerDidCompleteTransfer(transfer: viewModel.transfer)
             displaySuccess()
         }
     }
